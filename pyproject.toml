@@ -1,0 +1,55 @@
+[tool.poetry]
+name = "salary-bot"
+version = "0.1.0"
+description = "Salary bot"
+authors = ["Stepan Nazarov <stepanartov@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.11.5"
+pymongo = "^4.6.0"
+pydantic-settings = "^2.0.3"
+structlog = "^23.2.0"
+pydantic = "2.3.0"
+aiogram = "^3.1.1"
+motor = "^3.3.1"
+arrow = "^1.3.0"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.1.5"
+isort = "^5.12.0"
+mypy = "^1.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 120
+fixable = ["ALL"]
+select = ["ALL"]
+ignore = [
+    "W",
+    "I",
+    "C90",
+    "D",
+    "TRIO",
+    "CPY",
+    "DJ",
+    "INT",
+    "PD",
+    "PL",
+    "NPY",
+    "AIR",
+    "TCH",
+    "SIM108",
+]
+
+[tool.isort]
+py_version=311
+include_trailing_comma = true
+add_imports = ["from __future__ import annotations"]
+profile = "black"
+line_length = 120

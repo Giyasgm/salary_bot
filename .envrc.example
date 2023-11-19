@@ -1,0 +1,2 @@
+export SALARY_BOT_MONGO_DSN="mongodb://user:password@localhost:27017"
+export SALARY_BOT_BOT_TOKEN="your-secret-token"
